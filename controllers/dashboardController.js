@@ -11,3 +11,9 @@ export const reportes = (req, res) => {
     title: "Reportes - Fleet Monitor",
   });
 };
+
+export const login = (req, res) => {
+  res.render("login", {
+    title: "Inicio de sesión",
+  })
+};
