@@ -17,3 +17,9 @@ export const login = (req, res) => {
     title: "Inicio de sesión",
   })
 };
+
+export const configuracion = (req, res) =>{
+  res.render("settings", {
+    title: "⚙️Configuración⚙️",
+  })
+};
