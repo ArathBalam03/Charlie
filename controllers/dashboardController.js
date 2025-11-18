@@ -1,5 +1,3 @@
-// controllers/dashboardController.js
-
 export const mostrarDashboard = (req, res) => {
   res.render("dashboard", {
     title: "Fleet Monitor Dashboard",
@@ -16,10 +14,16 @@ export const operadores = (req, res) => {
   res.render("operadores", {
     title: "Operadores",
   });
-}
+};
+
+export const login = (req, res) => {
+  res.render("login", {
+    title: "Inicio de sesión",
+  });
+};
 
 export const configuracion = (req, res) => {
-  res.render("configuracion", {
-    title: "Configuración - Fleet Monitor"
+  res.render("settings", {
+    title: "Configuración",
   });
 };
