@@ -1,0 +1,64 @@
+// views/login.pug
+doctype html
+html(lang="es" class="dark h-full")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title #{title}
+    script(src="https://cdn.tailwindcss.com?plugins=forms,container-queries")
+    link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet")
+    script.
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#38bdf8",
+              "background-dark": "#0d1117",
+              "card-dark": "#161b22",
+              "text-light": "#e6edf3",
+              "border-dark": "#30363d"
+            }
+          }
+        }
+      };
+    style.
+      body { font-family: 'Inter', sans-serif; }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+
+  body.bg-background-dark.min-h-screen.flex.items-center.justify-center
+    main.w-full.max-w-md.p-8.space-y-6.rounded-xl.shadow-2xl.bg-gray-800
+      // Header del login
+      header.rounded-full.bg-slate-900.text-center.relative.-mt-24.p-4
+        span.material-symbols-outlined.text-primary.text-3xl local_shipping
+        h1.text-2xl.font-semibold.text-stone-50.mt-2 Login
+
+      // Formulario de login
+      form(action="/auth/login" method="POST" class="space-y-4")
+        // Mensaje de error
+        if error
+          p.text-red-400.text-sm.font-semibold.text-center #{error}
+
+        // Usuario
+        div.flex.flex-col.gap-1
+          label.text-sm.text-blue-100(for="usuario") Usuario
+          input#usuario(name="usuario" type="email" placeholder="Usuario" required
+            class="rounded-full w-full px-4 py-2 shadow-lg bg-gray-700 text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all")
+
+        // Contraseña
+        div.flex.flex-col.gap-1
+          label.text-sm.text-blue-100(for="password") Contraseña
+          input#password(name="password" type="password" placeholder="Contraseña" required
+            class="rounded-full w-full px-4 py-2 shadow-lg bg-gray-700 text-white focus:ring-2 focus:ring-primary focus:outline-none transition-all")
+
+        // Botón de inicio de sesión
+        button(type="submit"
+          class="w-full rounded-full bg-blue-500 px-4 py-2 text-lg font-semibold text-stone-50 hover:bg-indigo-400 transition-colors duration-200") Iniciar Sesión
+
+      // Footer opcional
+      p.text-center.text-gray-400.text-sm.mt-4
+        | ¿Olvidaste tu contraseña? 
+        a.text-primary.hover.underline(href="#") Restablecer

@@ -1,55 +1,74 @@
 extends ./layout/index.pug
 
 block mainContent
-  // ===========================
-  // ENCABEZADO
-  // ===========================
-  header(class="mb-8 flex justify-between items-center")
+
+  header(class="mb-8 flex flex-wrap justify-between items-center gap-4")
     h1(class="text-2xl font-bold text-white") Configuración del sistema
 
-  // ===========================
-  // AJUSTES GENERALES
-  // ===========================
   section(class="bg-card-dark p-6 rounded-2xl shadow-md mb-8")
     h2(class="text-lg font-semibold text-gray-200 mb-4") Ajustes generales
-    form(class="grid grid-cols-1 md:grid-cols-2 gap-4")
+
+    form(class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4")
+      // Nombre del sistema
       div
         label(class="text-gray-400 text-sm") Nombre del sistema
-        input(type="text" placeholder="Fleet Monitor" class="w-full mt-1 p-2 rounded-lg bg-gray-800 text-gray-200 border border-gray-700")
+        input(type="text" class="w-full mt-1 p-2 rounded-lg bg-gray-800 text-gray-200 border border-gray-700" value="Fleet Monitor")
+
+      // Tiempo de alerta por inactividad
       div
-        label(class="text-gray-400 text-sm") Tiempo de alerta inactividad (segundos)
-        input(type="number" placeholder="10" class="w-full mt-1 p-2 rounded-lg bg-gray-800 text-gray-200 border border-gray-700")
+        label(class="text-gray-400 text-sm") Tiempo de alerta por inactividad (segundos)
+        input(type="number" class="w-full mt-1 p-2 rounded-lg bg-gray-800 text-gray-200 border border-gray-700" value="60")
+
+      // Intensidad mínima para alerta
       div
         label(class="text-gray-400 text-sm") Intensidad mínima para alerta
-        input(type="number" placeholder="50" class="w-full mt-1 p-2 rounded-lg bg-gray-800 text-gray-200 border border-gray-700")
-      div
-        label(class="text-gray-400 text-sm") Notificaciones activadas
-        select(class="w-full mt-1 p-2 rounded-lg bg-gray-800 text-gray-200 border border-gray-700")
-          option(value="si") Sí
-          option(value="no") No
-    button(class="mt-4 bg-primary hover:bg-blue-400 text-white px-4 py-2 rounded-lg transition-all") Guardar cambios
+        input(type="number" class="w-full mt-1 p-2 rounded-lg bg-gray-800 text-gray-200 border border-gray-700" value="20")
 
-  // ===========================
-  // USUARIOS / ROLES
-  // ===========================
-  section(class="bg-card-dark p-6 rounded-2xl shadow-md")
+      // Activar notificaciones
+      div(class="flex items-center gap-2 mt-2")
+        input(type="checkbox" id="notificaciones" checked)
+        label(for="notificaciones" class="text-gray-400 text-sm") Activar notificaciones
+
+      // Tema
+      div
+        label(class="text-gray-400 text-sm") Tema
+        select(class="w-full mt-1 p-2 rounded-lg bg-gray-800 text-gray-200 border border-gray-700")
+          option(value="oscuro" selected) Oscuro
+          option(value="claro") Claro
+
+  section(class="bg-card-dark p-6 rounded-2xl shadow-md mb-8")
     h2(class="text-lg font-semibold text-gray-200 mb-4") Gestión de usuarios
+
+    button(class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-lg mb-4") Agregar usuario
+
     table(class="w-full text-sm text-gray-300")
       thead(class="text-gray-400 border-b border-gray-700")
         tr
-          th(class="py-2 text-left") Nombre
-          th(class="py-2 text-left") Rol
-          th(class="py-2 text-left") Acción
+          th(class="text-left py-2") Nombre
+          th(class="text-left py-2") Rol
+          th(class="text-left py-2") Email
+          th(class="text-left py-2") Acción
       tbody
-        tr
-          td Juan Pérez
+        tr(class="hover:bg-gray-800 transition-all")
+          td Carlos Martínez
           td Administrador
+          td carlos@empresa.com
           td
-            button(class="bg-red-600 hover:bg-red-500 text-white px-2 py-1 rounded-lg text-xs") Eliminar
-            button(class="bg-green-600 hover:bg-green-500 text-white px-2 py-1 rounded-lg text-xs ml-1") Editar
-        tr
-          td María López
+            button(class="text-blue-400 underline mr-2") Editar
+            button(class="text-red-400 underline") Eliminar
+        tr(class="hover:bg-gray-800 transition-all")
+          td José López
           td Supervisor
+          td jose@empresa.com
           td
-            button(class="bg-red-600 hover:bg-red-500 text-white px-2 py-1 rounded-lg text-xs") Eliminar
-            button(class="bg-green-600 hover:bg-green-500 text-white px-2 py-1 rounded-lg text-xs ml-1") Editar
+            button(class="text-blue-400 underline mr-2") Editar
+            button(class="text-red-400 underline") Eliminar
+        tr(class="hover:bg-gray-800 transition-all")
+          td Ana Rodríguez
+          td Operador
+          td ana@empresa.com
+          td
+            button(class="text-blue-400 underline mr-2") Editar
+            button(class="text-red-400 underline") Eliminar
+
+  button(class="mt-4 bg-primary hover:bg-blue-400 text-white px-4 py-2 rounded-lg transition-all") Guardar cambios

@@ -31,31 +31,44 @@ html(lang="es" class="dark")
 
   body.bg-background-dark.text-text-light.font-display.flex.min-h-screen
     // Sidebar global (estático)
-    aside(class="w-64 bg-card-dark border-r border-border-dark flex flex-col shrink-0")
+    //- aside(class="w-64 bg-card-dark border-r border-border-dark flex flex-col shrink-0")
+    aside(class="w-64 bg-card-dark border-r border-border-dark flex flex-col fixed h-screen")
       div(class="flex h-16 items-center gap-3 px-6 border-b border-border-dark")
         span(class="material-symbols-outlined text-primary text-3xl") local_shipping
         h2(class="text-xl font-bold text-white") FleetMonitor
-      nav(class="flex-1 flex flex-col gap-2 p-4")
-        a(class="flex items-center gap-3 rounded-lg px-3 py-2 text-white/70 hover:text-white transition-all", href="/dashboard")
+      //- nav(class="flex-1 flex flex-col gap-2 p-4")
+      nav(class="flex-1 flex flex-col gap-2 p-4 overflow-y-auto")
+
+        a(class=`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${active === 'dashboard' ? 'bg-primary/20 text-white' : 'text-white/70 hover:text-white'}`, href="/dashboard")
           span(class="material-symbols-outlined text-xl") dashboard
           span Dashboard
-        a(class="flex items-center gap-3 rounded-lg px-3 py-2 text-white/70 hover:text-white transition-all", href="/reportes")
+
+        a(class=`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${active === 'reportes' ? 'bg-primary/20 text-white' : 'text-white/70 hover:text-white'}`, href="/reportes")
           span(class="material-symbols-outlined text-xl") bar_chart
           span Reportes
 
-        a(class="flex items-center gap-3 rounded-lg px-3 py-2 text-white/70 hover:text-white transition-all", href="/operadores")
+        a(class=`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${active === 'operadores' ? 'bg-primary/20 text-white' : 'text-white/70 hover:text-white'}`, href="/operadores")
           span(class="material-symbols-outlined text-xl") people
           span Operadores
 
-        a(class="flex items-center gap-3 rounded-lg px-3 py-2 text-white/70 hover:text-white transition-all", href="/configuracion")
+        a(class=`flex items-center gap-3 rounded-lg px-3 py-2 transition-all ${active === 'configuracion' ? 'bg-primary/20 text-white' : 'text-white/70 hover:text-white'}`, href="/configuracion")
           span(class="material-symbols-outlined text-xl") settings
           span Configuración
-
+      // Parte inferior: botón de cerrar sesión
+      div(class="p-4 border-t border-border-dark")
+        a(href="/auth/login" class="flex items-center gap-3 px-3 py-2 rounded-lg text-white/70 hover:text-white bg-red-600 hover:bg-red-500 transition-all")
+          span(class="material-symbols-outlined text-xl") logout
+          span Cerrar sesión
     // Aquí se inyecta el contenido dinámico
-    main.flex-1.p-6
+    //- main.flex-1.p-6
+    
+    main.flex-1.p-6.ml-64
+      
       block mainContent
 
-    script(src="/js/main.js")
+    script(src="/js/dashboard.js")
     script(src="/js/reportes.js")
     script(src="/js/operadores.js")
+    script(src="/js/configuracion.js")
+
 
