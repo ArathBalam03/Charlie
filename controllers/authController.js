@@ -1,5 +1,7 @@
 // controllers/authController.js
 
+import { loginUser } from "../services/user.js";
+
 export const formularioLogin = (req, res) => {
   res.render("auth/login", {
     title: "Iniciar sesión",
@@ -8,31 +10,40 @@ export const formularioLogin = (req, res) => {
   });
 };
 
-export const autenticarUsuario = (req, res) => {
-  const { usuario, password } = req.body;
+export const autenticarUsuario = async (req, res) => {
+  const { username, password } = req.body;
+  console.log('Received login request for user:',  username, password);
+  try {
+    
+    // Validación básica
+    if (!username  || !password) {
+      return res.render("auth/login", {
+        title: "Iniciar sesión",
+        error: "Todos los campos son obligatorios",
+        active: ""
+      });
+    }
 
-  // Usuario temporal
-  const USER = "admin@gmail.com";
-  const PASS = "1234";
+    const result = await loginUser({username, password});
 
-  // Validación básica
-  if (!usuario || !password) {
+    // Validación de credenciales: `loginUser` devuelve `false` si falla
+    if (!result) {
+      return res.render("auth/login", {
+        title: "Iniciar sesión",
+        error: "Credenciales incorrectas o error de conexión",
+        active: ""
+      });
+    }
+
+    // Si todo está bien, redirigir al dashboard
+    return res.redirect("/dashboard");
+ 
+  } catch (error) {
+    console.error('Error during authentication:', error);
     return res.render("auth/login", {
       title: "Iniciar sesión",
-      error: "Todos los campos son obligatorios",
+      error: "Error del servidor. Inténtalo de nuevo más tarde.",
       active: ""
     });
   }
-
-  // Validación de credenciales
-  if (usuario !== USER || password !== PASS) {
-    return res.render("auth/login", {
-      title: "Iniciar sesión",
-      error: "Credenciales incorrectas",
-      active: ""
-    });
-  }
-
-  // Si coincide → dashboard
-  return res.redirect("/dashboard");
 };

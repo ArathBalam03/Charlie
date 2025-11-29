@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get("/configuracion", configuracion);
 router.get("/dashboard", mostrarDashboard);
-// router.get("/", (req, res) => res.redirect("/dashboard"));
+router.get("/", (req, res) => res.redirect("/dashboard"));
 
 router.get('/reportes', reportes);
 router.get('/operadores', operadores);
