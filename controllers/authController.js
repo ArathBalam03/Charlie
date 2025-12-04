@@ -4,35 +4,31 @@ export const formularioLogin = (req, res) => {
   res.render("auth/login", {
     title: "Iniciar sesión",
     error: null,
-    active: ""
+    layout: false
   });
 };
 
 export const autenticarUsuario = (req, res) => {
   const { usuario, password } = req.body;
 
-  // Usuario temporal
   const USER = "admin@gmail.com";
   const PASS = "1234";
 
-  // Validación básica
   if (!usuario || !password) {
     return res.render("auth/login", {
       title: "Iniciar sesión",
       error: "Todos los campos son obligatorios",
-      active: ""
+      layout: false
     });
   }
 
-  // Validación de credenciales
   if (usuario !== USER || password !== PASS) {
     return res.render("auth/login", {
       title: "Iniciar sesión",
       error: "Credenciales incorrectas",
-      active: ""
+      layout: false
     });
   }
 
-  // Si coincide → dashboard
-  return res.redirect("/dashboard");
+  return res.redirect("/devices");
 };

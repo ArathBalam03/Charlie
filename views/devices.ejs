@@ -1,0 +1,217 @@
+<!-- PageHeading & Toolbar -->
+<div class="col-span-12 flex flex-col gap-6">
+  <div class="flex flex-wrap justify-between items-center gap-4">
+    <div class="flex flex-col gap-1">
+      <h1 class="text-white text-3xl font-bold leading-tight tracking-tight">Gestión de Dispositivos</h1>
+      <p class="text-gray-400 text-base font-normal leading-normal">Una vista visual y organizada de sus dispositivos.
+      </p>
+    </div>
+    <button
+      class="flex min-w-[84px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-11 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors">
+      <span class="material-symbols-outlined text-xl">add</span>
+      <span class="truncate">Agregar Nuevo Dispositivo</span>
+    </button>
+  </div>
+</div>
+
+<!-- Search & Filters -->
+<div class="col-span-12 flex flex-col sm:flex-row gap-4 items-center">
+  <div class="w-full sm:flex-1">
+    <label class="flex flex-col min-w-40 h-12 w-full">
+      <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+        <div
+          class="text-gray-400 flex border-none bg-[#2D3748] items-center justify-center pl-4 rounded-l-lg border-r-0">
+          <span class="material-symbols-outlined">search</span>
+        </div>
+        <input
+          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-[#2D3748] h-full placeholder:text-gray-400 px-4 pl-2 text-sm font-normal leading-normal"
+          placeholder="Buscar por ID, tipo..." value="" />
+      </div>
+    </label>
+  </div>
+  <div class="flex gap-3 w-full sm:w-auto">
+    <button
+      class="flex h-12 w-full sm:w-auto shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#2D3748] px-4">
+      <p class="text-gray-300 text-sm font-medium leading-normal">Status: All</p>
+      <span class="material-symbols-outlined text-gray-300 text-xl">expand_more</span>
+    </button>
+    <button
+      class="flex h-12 w-full sm:w-auto shrink-0 items-center justify-center gap-x-2 rounded-lg bg-[#2D3748] px-4">
+      <p class="text-gray-300 text-sm font-medium leading-normal">Type: All</p>
+      <span class="material-symbols-outlined text-gray-300 text-xl">expand_more</span>
+    </button>
+  </div>
+</div>
+
+
+<!-- Device Cards Grid -->
+<div class="col-span-12 xl:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+  <!-- Card 1 (Active) -->
+  <div
+    class="bg-[#2D3748] rounded-xl p-5 flex flex-col gap-4 border-2 border-primary shadow-lg shadow-primary/20 cursor-pointer">
+    <div class="flex justify-between items-start">
+      <div class="flex flex-col">
+        <h3 class="text-lg font-bold text-white">GPS-TRK-007</h3>
+        <p class="text-sm text-gray-400">Tipo: GPS Tracker</p>
+      </div>
+      <div class="flex items-center gap-2 rounded-full bg-green-500/20 px-3 py-1">
+        <div class="w-2 h-2 rounded-full bg-green-400"></div>
+        <span class="text-xs font-medium text-green-300">Online</span>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-4">
+      <p class="text-sm text-gray-400">Última conexión:</p>
+      <p class="text-base font-medium text-white">23/10/2023 14:32</p>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div
+    class="bg-[#2D3748] rounded-xl p-5 flex flex-col gap-4 border-2 border-transparent hover:border-primary/50 transition-colors cursor-pointer">
+    <div class="flex justify-between items-start">
+      <div class="flex flex-col">
+        <h3 class="text-lg font-bold text-white">SENSOR-T-003</h3>
+        <p class="text-sm text-gray-400">Tipo: Sensor de Temperatura</p>
+      </div>
+      <div class="flex items-center gap-2 rounded-full bg-red-500/20 px-3 py-1">
+        <div class="w-2 h-2 rounded-full bg-red-400"></div>
+        <span class="text-xs font-medium text-red-300">Offline</span>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-4">
+      <p class="text-sm text-gray-400">Última conexión:</p>
+      <p class="text-base font-medium text-white">22/10/2023 08:15</p>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div
+    class="bg-[#2D3748] rounded-xl p-5 flex flex-col gap-4 border-2 border-transparent hover:border-primary/50 transition-colors cursor-pointer">
+    <div class="flex justify-between items-start">
+      <div class="flex flex-col">
+        <h3 class="text-lg font-bold text-white">GPS-TRK-008</h3>
+        <p class="text-sm text-gray-400">Tipo: GPS Tracker</p>
+      </div>
+      <div class="flex items-center gap-2 rounded-full bg-green-500/20 px-3 py-1">
+        <div class="w-2 h-2 rounded-full bg-green-400"></div>
+        <span class="text-xs font-medium text-green-300">Online</span>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-4">
+      <p class="text-sm text-gray-400">Última conexión:</p>
+      <p class="text-base font-medium text-white">23/10/2023 14:35</p>
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div
+    class="bg-[#2D3748] rounded-xl p-5 flex flex-col gap-4 border-2 border-transparent hover:border-primary/50 transition-colors cursor-pointer">
+    <div class="flex justify-between items-start">
+      <div class="flex flex-col">
+        <h3 class="text-lg font-bold text-white">GPS-TRK-009</h3>
+        <p class="text-sm text-gray-400">Tipo: GPS Tracker</p>
+      </div>
+      <div class="flex items-center gap-2 rounded-full bg-green-500/20 px-3 py-1">
+        <div class="w-2 h-2 rounded-full bg-green-400"></div>
+        <span class="text-xs font-medium text-green-300">Online</span>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-4">
+      <p class="text-sm text-gray-400">Última conexión:</p>
+      <p class="text-base font-medium text-white">23/10/2023 14:34</p>
+    </div>
+  </div>
+
+  <!-- Card 5 -->
+  <div
+    class="bg-[#2D3748] rounded-xl p-5 flex flex-col gap-4 border-2 border-transparent hover:border-primary/50 transition-colors cursor-pointer">
+    <div class="flex justify-between items-start">
+      <div class="flex flex-col">
+        <h3 class="text-lg font-bold text-white">SENSOR-P-012</h3>
+        <p class="text-sm text-gray-400">Tipo: Sensor de Presión</p>
+      </div>
+      <div class="flex items-center gap-2 rounded-full bg-red-500/20 px-3 py-1">
+        <div class="w-2 h-2 rounded-full bg-red-400"></div>
+        <span class="text-xs font-medium text-red-300">Offline</span>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-4">
+      <p class="text-sm text-gray-400">Última conexión:</p>
+      <p class="text-base font-medium text-white">21/10/2023 19:40</p>
+    </div>
+  </div>
+</div>
+
+<!-- Detail Side Panel -->
+<aside class="col-span-12 xl:col-span-4 bg-[#1A202C] rounded-xl p-6 flex flex-col">
+
+  <div class="flex-1">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl font-bold text-white">Detalles del Dispositivo</h2>
+      <button class="text-gray-400 hover:text-white">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="flex flex-col gap-5">
+      <div class="flex flex-col gap-1">
+        <p class="text-sm text-primary font-medium">Device ID</p>
+        <p class="text-lg font-semibold text-white">GPS-TRK-007</p>
+      </div>
+      <div class="border-t border-white/10"></div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="flex flex-col gap-1">
+          <p class="text-sm text-gray-400">Estado</p>
+          <div class="flex items-center gap-2">
+            <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+            <p class="text-base text-white">Online</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-sm text-gray-400">Tipo de Dispositivo</p>
+          <p class="text-base text-white">GPS Tracker</p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-sm text-gray-400">Vehículo Asignado</p>
+          <p class="text-base text-white">Volvo FH16</p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-sm text-gray-400">IMEI</p>
+          <p class="text-base text-white">358799103214567</p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-sm text-gray-400">Modelo</p>
+          <p class="text-base text-white">Teltonika FMB920</p>
+        </div>
+        <div class="flex flex-col gap-1">
+          <p class="text-sm text-gray-400">Fecha de Instalación</p>
+          <p class="text-base text-white">15/08/2023</p>
+        </div>
+      </div>
+      <div class="border-t border-white/10"></div>
+      <div class="flex flex-col gap-1">
+        <p class="text-sm text-gray-400">Última Conexión</p>
+        <p class="text-base text-white">23/10/2023 14:32:11</p>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col gap-3 pt-6 border-t border-white/10">
+    <button
+      class="flex w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-11 px-5 bg-primary/20 text-primary text-sm font-bold leading-normal tracking-wide hover:bg-primary/30 transition-colors">
+      <span class="material-symbols-outlined text-xl">history</span>
+      <span>Consultar Historial</span>
+    </button>
+    <div class="flex gap-3">
+      <button
+        class="flex w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-11 px-5 bg-[#2D3748] text-white text-sm font-bold leading-normal tracking-wide hover:bg-[#3f4a5c] transition-colors">
+        <span class="material-symbols-outlined text-xl">edit</span>
+        <span>Editar</span>
+      </button>
+      <button
+        class="flex w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-11 px-5 bg-red-500/20 text-red-300 text-sm font-bold leading-normal tracking-wide hover:bg-red-500/30 transition-colors">
+        <span class="material-symbols-outlined text-xl">delete</span>
+        <span>Eliminar</span>
+      </button>
+    </div>
+  </div>
+</aside>

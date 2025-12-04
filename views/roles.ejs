@@ -1,0 +1,102 @@
+<div class="col-span-12">
+
+  <!-- Breadcrumbs -->
+  <div class="flex flex-wrap gap-2 mb-6">
+    <a class="text-gray-500 dark:text-gray-400 text-base font-medium leading-normal hover:text-primary transition-colors"
+      href="#">Administración</a>
+    <span class="text-gray-500 dark:text-gray-400 text-base font-medium leading-normal">/</span>
+    <span class="text-gray-900 dark:text-white text-base font-medium leading-normal">Gestión de Roles</span>
+  </div>
+  <!-- PageHeading -->
+  <div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+    <h1 class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Gestión de Roles del
+      Sistema</h1>
+    <button
+      class="flex items-center justify-center gap-2 min-w-[84px] cursor-pointer rounded-lg h-11 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+      <span class="material-symbols-outlined">add_circle</span>
+      <span class="truncate">Crear Nuevo Rol</span>
+    </button>
+  </div>
+  <!-- Table -->
+  <div class="w-full @container">
+    <div class="overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#10191c]">
+      <table class="min-w-full">
+        <thead class="bg-gray-50 dark:bg-gray-900/50">
+          <tr>
+            <th
+              class="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider w-1/3">
+              Nombre del Rol</th>
+            <th
+              class="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider w-1/2">
+              Descripción</th>
+            <th
+              class="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+              Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-800">
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Administrador</td>
+            <td class="px-6 py-4 whitespace-normal text-sm text-gray-600 dark:text-gray-400">Acceso total a todas las
+              funcionalidades del sistema, incluyendo gestión de usuarios y configuración.</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <button
+                  class="text-gray-500 hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary"><span
+                    class="material-symbols-outlined">edit</span></button>
+                <button
+                  class="text-gray-500 hover:text-red-500 transition-colors dark:text-gray-400 dark:hover:text-red-500"><span
+                    class="material-symbols-outlined">delete</span></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Supervisor</td>
+            <td class="px-6 py-4 whitespace-normal text-sm text-gray-600 dark:text-gray-400">Permite visualizar el
+              seguimiento en tiempo real y generar reportes, pero no puede editar usuarios.</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <button
+                  class="text-gray-500 hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary"><span
+                    class="material-symbols-outlined">edit</span></button>
+                <button
+                  class="text-gray-500 hover:text-red-500 transition-colors dark:text-gray-400 dark:hover:text-red-500"><span
+                    class="material-symbols-outlined">delete</span></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Operador</td>
+            <td class="px-6 py-4 whitespace-normal text-sm text-gray-600 dark:text-gray-400">Acceso limitado a la
+              visualización del mapa de seguimiento en tiempo real.</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <button
+                  class="text-gray-500 hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary"><span
+                    class="material-symbols-outlined">edit</span></button>
+                <button
+                  class="text-gray-500 hover:text-red-500 transition-colors dark:text-gray-400 dark:hover:text-red-500"><span
+                    class="material-symbols-outlined">delete</span></button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white">Auditor</td>
+            <td class="px-6 py-4 whitespace-normal text-sm text-gray-600 dark:text-gray-400">Solo puede ver reportes y
+              registros de actividad del sistema para fines de auditoría.</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <div class="flex items-center gap-4">
+                <button
+                  class="text-gray-500 hover:text-primary transition-colors dark:text-gray-400 dark:hover:text-primary"><span
+                    class="material-symbols-outlined">edit</span></button>
+                <button
+                  class="text-gray-500 hover:text-red-500 transition-colors dark:text-gray-400 dark:hover:text-red-500"><span
+                    class="material-symbols-outlined">delete</span></button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

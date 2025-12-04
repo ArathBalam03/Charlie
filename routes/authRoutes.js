@@ -1,3 +1,5 @@
+// routes/authRoutes.js
+
 import express from "express";
 import { formularioLogin, autenticarUsuario } from "../controllers/authController.js";
 

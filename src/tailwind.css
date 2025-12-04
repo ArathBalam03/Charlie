@@ -1,7 +1,0 @@
-/* src/tailwind.css */
-
-/* Reseteo de estilos base (Preflight) */
-@import "tailwindcss/preflight";
-
-/* Clases utilitarias de Tailwind */
-@import "tailwindcss/utilities";

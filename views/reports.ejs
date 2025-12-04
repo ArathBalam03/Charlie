@@ -1,0 +1,124 @@
+<div class="col-span-12">
+
+  <!-- PageHeading -->
+  <header class="mb-8">
+    <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Centro de Operaciones Clave</h1>
+    <p class="text-gray-400 text-base font-normal leading-normal mt-2">Gestiona reportes, vehículos y usuarios desde un
+      solo lugar.</p>
+  </header>
+  <!-- Operations Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <!-- Section 1: Create Report -->
+    <section class="flex flex-col gap-4 rounded-xl bg-[#111618] p-6">
+      <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Crear Reporte de Incidencia</h2>
+      <form class="flex flex-col gap-4">
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Tipo de Incidente</p>
+          <select
+            class="form-select w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal appearance-none">
+            <option>Seleccionar tipo</option>
+            <option>Accidente</option>
+            <option>Falla mecánica</option>
+            <option>Robo de unidad</option>
+            <option>Retraso</option>
+          </select>
+        </label>
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Vehículo Afectado</p>
+          <select
+            class="form-select w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal appearance-none">
+            <option>Seleccionar vehículo</option>
+            <option>VOL-001</option>
+            <option>KEN-005</option>
+            <option>FRT-012</option>
+          </select>
+        </label>
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Fecha y Hora</p>
+          <input
+            class="form-input w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal"
+            style="color-scheme: dark;" type="datetime-local" />
+        </label>
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Descripción</p>
+          <textarea
+            class="form-textarea w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary p-4 text-base font-normal"
+            placeholder="Detalles del incidente..." rows="4"></textarea>
+        </label>
+        <button
+          class="mt-2 w-full h-12 rounded-lg bg-primary text-background-dark font-bold text-base hover:bg-primary/90 transition-colors duration-200"
+          type="submit">Generar Reporte</button>
+      </form>
+    </section>
+    <!-- Section 2: Register Vehicle -->
+    <section class="flex flex-col gap-4 rounded-xl bg-[#111618] p-6">
+      <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Registrar Nuevo Vehículo</h2>
+      <form class="flex flex-col gap-4">
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Placas</p>
+          <input
+            class="form-input w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal placeholder:text-gray-500"
+            placeholder="Ej: ABC-123-D" type="text" />
+        </label>
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Marca</p>
+          <input
+            class="form-input w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal placeholder:text-gray-500"
+            placeholder="Ej: Volvo" type="text" />
+        </label>
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Modelo</p>
+          <input
+            class="form-input w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal placeholder:text-gray-500"
+            placeholder="Ej: VNL 860" type="text" />
+        </label>
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Propietario</p>
+          <input
+            class="form-input w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal placeholder:text-gray-500"
+            placeholder="Ej: Juan Pérez" type="text" />
+        </label>
+        <div class="flex-grow"></div>
+        <button
+          class="mt-auto w-full h-12 rounded-lg bg-primary text-background-dark font-bold text-base hover:bg-primary/90 transition-colors duration-200"
+          type="submit">Registrar Vehículo</button>
+      </form>
+    </section>
+    <!-- Section 3: Register User -->
+    <section class="flex flex-col gap-4 rounded-xl bg-[#111618] p-6">
+      <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em]">Registrar Nuevo Usuario</h2>
+      <form class="flex flex-col gap-4">
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Nombre Completo</p>
+          <input
+            class="form-input w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal placeholder:text-gray-500"
+            placeholder="Ej: Ana López" type="text" />
+        </label>
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Email</p>
+          <input
+            class="form-input w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal placeholder:text-gray-500"
+            placeholder="ejemplo@correo.com" type="email" />
+        </label>
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Contraseña</p>
+          <input
+            class="form-input w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal placeholder:text-gray-500"
+            placeholder="••••••••" type="password" />
+        </label>
+        <label class="flex flex-col w-full">
+          <p class="text-white text-base font-medium leading-normal pb-2">Rol de Usuario</p>
+          <select
+            class="form-select w-full rounded-lg text-white border-2 border-[#3b4e54] bg-[#1b2427] focus:border-primary focus:ring-primary h-12 px-4 text-base font-normal appearance-none">
+            <option>Seleccionar rol</option>
+            <option>Administrador</option>
+            <option>Operador</option>
+          </select>
+        </label>
+        <button
+          class="mt-2 w-full h-12 rounded-lg bg-primary text-background-dark font-bold text-base hover:bg-primary/90 transition-colors duration-200"
+          type="submit">Registrar Usuario</button>
+      </form>
+    </section>
+  </div>
+</div>

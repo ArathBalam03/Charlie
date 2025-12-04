@@ -1,0 +1,194 @@
+<div class="col-span-12">
+
+  <!-- PageHeading -->
+  <header class="flex flex-wrap items-center justify-between gap-4 mb-6">
+    <div class="flex flex-col gap-2">
+      <h1 class="text-gray-900 dark:text-white text-3xl font-bold leading-tight tracking-tight">Gestión de Dispositivos
+      </h1>
+      <p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Administre, agregue y elimine
+        dispositivos de monitoreo.</p>
+    </div>
+    <button
+      class="flex items-center justify-center gap-2 overflow-hidden rounded-lg h-11 px-5 bg-primary text-white text-sm font-bold leading-normal tracking-wide shadow-lg shadow-primary/30 hover:bg-primary/90 transition-colors">
+      <span class="material-symbols-outlined">add_circle</span>
+      <span class="truncate">Agregar Nuevo Dispositivo</span>
+    </button>
+  </header>
+  <!-- Search and Filters -->
+  <div class="mb-6 space-y-4">
+    <!-- SearchBar -->
+    <div class="w-full">
+      <label class="flex flex-col min-w-40 h-12 w-full">
+        <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+          <div
+            class="text-gray-400 flex bg-white dark:bg-gray-800/50 items-center justify-center pl-4 rounded-l-lg border border-gray-200 dark:border-gray-700 border-r-0">
+            <span class="material-symbols-outlined">search</span>
+          </div>
+          <input
+            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 h-full placeholder:text-gray-400 dark:placeholder:text-gray-500 px-4 text-base font-normal leading-normal"
+            placeholder="Buscar por ID, vehículo..." value="" />
+        </div>
+      </label>
+    </div>
+    <!-- Chips -->
+    <div class="flex gap-3">
+      <button
+        class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+        <span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-xl">label</span>
+        <p class="text-gray-700 dark:text-gray-300 text-sm font-medium leading-normal">Filtrar por Tipo</p>
+        <span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-xl">expand_more</span>
+      </button>
+      <button
+        class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+        <span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-xl">circle</span>
+        <p class="text-gray-700 dark:text-gray-300 text-sm font-medium leading-normal">Filtrar por Estado</p>
+        <span class="material-symbols-outlined text-gray-500 dark:text-gray-400 text-xl">expand_more</span>
+      </button>
+    </div>
+  </div>
+  <!-- Devices Table -->
+  <div class="overflow-x-auto bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
+    <table class="min-w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-gray-400">
+        <tr>
+          <th class="px-6 py-3" scope="col">ID de Dispositivo</th>
+          <th class="px-6 py-3" scope="col">Tipo</th>
+          <th class="px-6 py-3" scope="col">Estado</th>
+          <th class="px-6 py-3" scope="col">Última Conexión</th>
+          <th class="px-6 py-3" scope="col">Vehículo Asociado</th>
+          <th class="px-6 py-3 text-right" scope="col">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="bg-white dark:bg-gray-900/50 border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
+          <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">DEV-00152</td>
+          <td class="px-6 py-4">GPS Tracker</td>
+          <td class="px-6 py-4">
+            <div class="flex items-center gap-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+              <span>Activo</span>
+            </div>
+          </td>
+          <td class="px-6 py-4">2023-10-27 14:30</td>
+          <td class="px-6 py-4">VOL-TRK-789</td>
+          <td class="px-6 py-4">
+            <div class="flex justify-end gap-2">
+              <button
+                class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300"><span
+                  class="material-symbols-outlined text-xl">visibility</span></button>
+              <button
+                class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300"><span
+                  class="material-symbols-outlined text-xl">edit</span></button>
+              <button class="p-2 rounded-md hover:bg-red-100 dark:hover:bg-red-900/50 text-red-500"><span
+                  class="material-symbols-outlined text-xl">delete</span></button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="bg-white dark:bg-gray-900/50 border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
+          <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">DEV-00153</td>
+          <td class="px-6 py-4">Sensor de Temp.</td>
+          <td class="px-6 py-4">
+            <div class="flex items-center gap-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-red-500"></div>
+              <span>Inactivo</span>
+            </div>
+          </td>
+          <td class="px-6 py-4">2023-10-25 09:15</td>
+          <td class="px-6 py-4">SCA-RFG-123</td>
+          <td class="px-6 py-4">
+            <div class="flex justify-end gap-2">
+              <button
+                class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300"><span
+                  class="material-symbols-outlined text-xl">visibility</span></button>
+              <button
+                class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300"><span
+                  class="material-symbols-outlined text-xl">edit</span></button>
+              <button class="p-2 rounded-md hover:bg-red-100 dark:hover:bg-red-900/50 text-red-500"><span
+                  class="material-symbols-outlined text-xl">delete</span></button>
+            </div>
+          </td>
+        </tr>
+        <tr
+          class="bg-white dark:bg-gray-900/50 border-b dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50">
+          <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">DEV-00154</td>
+          <td class="px-6 py-4">GPS Tracker</td>
+          <td class="px-6 py-4">
+            <div class="flex items-center gap-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
+              <span>Mantenimiento</span>
+            </div>
+          </td>
+          <td class="px-6 py-4">2023-10-26 18:00</td>
+          <td class="px-6 py-4">MER-ACT-456</td>
+          <td class="px-6 py-4">
+            <div class="flex justify-end gap-2">
+              <button
+                class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300"><span
+                  class="material-symbols-outlined text-xl">visibility</span></button>
+              <button
+                class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300"><span
+                  class="material-symbols-outlined text-xl">edit</span></button>
+              <button class="p-2 rounded-md hover:bg-red-100 dark:hover:bg-red-900/50 text-red-500"><span
+                  class="material-symbols-outlined text-xl">delete</span></button>
+            </div>
+          </td>
+        </tr>
+        <tr class="bg-white dark:bg-gray-900/50 hover:bg-gray-50 dark:hover:bg-gray-800/50">
+          <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">DEV-00155</td>
+          <td class="px-6 py-4">Sensor de Puerta</td>
+          <td class="px-6 py-4">
+            <div class="flex items-center gap-2">
+              <div class="h-2.5 w-2.5 rounded-full bg-green-500"></div>
+              <span>Activo</span>
+            </div>
+          </td>
+          <td class="px-6 py-4">2023-10-27 14:25</td>
+          <td class="px-6 py-4">VOL-TRK-789</td>
+          <td class="px-6 py-4">
+            <div class="flex justify-end gap-2">
+              <button
+                class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300"><span
+                  class="material-symbols-outlined text-xl">visibility</span></button>
+              <button
+                class="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300"><span
+                  class="material-symbols-outlined text-xl">edit</span></button>
+              <button class="p-2 rounded-md hover:bg-red-100 dark:hover:bg-red-900/50 text-red-500"><span
+                  class="material-symbols-outlined text-xl">delete</span></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Pagination -->
+  <nav aria-label="Table navigation" class="flex items-center justify-between pt-4">
+    <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Mostrando <span
+        class="font-semibold text-gray-900 dark:text-white">1-4</span> de <span
+        class="font-semibold text-gray-900 dark:text-white">100</span></span>
+    <ul class="inline-flex -space-x-px text-sm h-8">
+      <li>
+        <a class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          href="#">Anterior</a>
+      </li>
+      <li>
+        <a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          href="#">1</a>
+      </li>
+      <li>
+        <a aria-current="page"
+          class="flex items-center justify-center px-3 h-8 text-primary border border-gray-300 bg-primary/20 hover:bg-primary/30 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+          href="#">2</a>
+      </li>
+      <li>
+        <a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          href="#">3</a>
+      </li>
+      <li>
+        <a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+          href="#">Siguiente</a>
+      </li>
+    </ul>
+  </nav>
+</div>
