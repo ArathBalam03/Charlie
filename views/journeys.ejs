@@ -1,203 +1,74 @@
 <div class="col-span-12">
-  <!-- PageHeading -->
-  <div class="flex flex-wrap justify-between items-center gap-4">
-    <div class="flex flex-col gap-2">
-      <h1 class="text-white text-3xl font-black tracking-tight">Gestión de Viajes</h1>
-      <p class="text-[#9cb2ba] text-base font-normal">Administre, consulte y cree nuevos trayectos para la flota.</p>
-    </div>
-  </div>
-  <!-- Toolbar and Filters -->
-  <div class="flex flex-wrap items-center justify-between gap-4 mt-8">
-    <div class="flex gap-2 items-center w-full md:w-auto">
-      <div class="relative w-full max-w-xs">
-        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">search</span>
-        <input
-          class="w-full h-10 pl-10 pr-4 bg-[#111618] border border-[#3b4e54] rounded-lg text-white text-sm focus:ring-primary focus:border-primary"
-          placeholder="Buscar por ID, vehículo..." type="text" />
-      </div>
-    </div>
-    <button
-      class="flex items-center justify-center gap-2 h-10 px-4 bg-primary text-[#111618] rounded-lg text-sm font-bold w-full md:w-auto">
-      <span class="material-symbols-outlined fill">add</span>
-      <span class="truncate">Crear Nuevo Viaje</span>
-    </button>
-  </div>
-  <!-- Chips for filtering -->
-  <div class="flex gap-2 p-1 overflow-x-auto mt-4">
-    <button
-      class="flex shrink-0 items-center justify-center h-8 px-4 rounded-full bg-primary/20 text-primary text-sm font-medium">Todos</button>
-    <button
-      class="flex shrink-0 items-center justify-center h-8 px-4 rounded-full bg-[#283539] hover:bg-[#3b4e54] text-white text-sm font-medium">En
-      curso</button>
-    <button
-      class="flex shrink-0 items-center justify-center h-8 px-4 rounded-full bg-[#283539] hover:bg-[#3b4e54] text-white text-sm font-medium">Completado</button>
-    <button
-      class="flex shrink-0 items-center justify-center h-8 px-4 rounded-full bg-[#283539] hover:bg-[#3b4e54] text-white text-sm font-medium">Cancelado</button>
-  </div>
-  <!-- Table -->
-  <div class="mt-4 @container">
-    <div class="overflow-hidden rounded-xl border border-[#3b4e54] bg-[#111618]">
-      <div class="overflow-x-auto">
-        <table class="w-full text-left">
-          <thead>
-            <tr class="bg-[#1b2427]">
-              <th class="table-col-1 px-4 py-3 text-white text-sm font-medium">ID de Viaje</th>
-              <th class="table-col-2 px-4 py-3 text-white text-sm font-medium">Vehículo</th>
-              <th class="table-col-3 px-4 py-3 text-white text-sm font-medium">Punto de Inicio</th>
-              <th class="table-col-4 px-4 py-3 text-white text-sm font-medium">Punto de Llegada</th>
-              <th class="table-col-5 px-4 py-3 text-white text-sm font-medium">Fecha/Hora</th>
-              <th class="table-col-6 px-4 py-3 text-white text-sm font-medium">Estado</th>
-              <th class="table-col-7 px-4 py-3 text-white text-sm font-medium text-right">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="border-t border-[#3b4e54]">
-              <td class="table-col-1 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm font-mono">VIAJE-00123</td>
-              <td class="table-col-2 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Tractor-A58</td>
-              <td class="table-col-3 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Almacén Central</td>
-              <td class="table-col-4 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Puerto de Callao</td>
-              <td class="table-col-5 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">2024-05-21 08:00</td>
-              <td class="table-col-6 h-[72px] px-4 py-2">
-                <span
-                  class="inline-flex items-center justify-center rounded-full bg-blue-500/20 px-3 py-1 text-sm font-medium text-blue-400">En
-                  curso</span>
-              </td>
-              <td class="table-col-7 h-[72px] px-4 py-2 text-right">
-                <div class="flex justify-end gap-2">
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white"><span
-                      class="material-symbols-outlined text-base">visibility</span></button>
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white"><span
-                      class="material-symbols-outlined text-base">edit</span></button>
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-red-400"><span
-                      class="material-symbols-outlined text-base">delete</span></button>
-                </div>
-              </td>
-            </tr>
-            <tr class="border-t border-[#3b4e54]">
-              <td class="table-col-1 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm font-mono">VIAJE-00122</td>
-              <td class="table-col-2 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Placa: XYZ-123</td>
-              <td class="table-col-3 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Centro de Distribución</td>
-              <td class="table-col-4 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Cliente Final Sur</td>
-              <td class="table-col-5 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">2024-05-20 14:30</td>
-              <td class="table-col-6 h-[72px] px-4 py-2">
-                <span
-                  class="inline-flex items-center justify-center rounded-full bg-green-500/20 px-3 py-1 text-sm font-medium text-green-400">Completado</span>
-              </td>
-              <td class="table-col-7 h-[72px] px-4 py-2 text-right">
-                <div class="flex justify-end gap-2">
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white"><span
-                      class="material-symbols-outlined text-base">visibility</span></button>
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white"><span
-                      class="material-symbols-outlined text-base">edit</span></button>
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-red-400"><span
-                      class="material-symbols-outlined text-base">delete</span></button>
-                </div>
-              </td>
-            </tr>
-            <tr class="border-t border-[#3b4e54]">
-              <td class="table-col-1 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm font-mono">VIAJE-00121</td>
-              <td class="table-col-2 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Camión-C12</td>
-              <td class="table-col-3 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Planta de Producción</td>
-              <td class="table-col-4 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Almacén Norte</td>
-              <td class="table-col-5 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">2024-05-20 09:15</td>
-              <td class="table-col-6 h-[72px] px-4 py-2">
-                <span
-                  class="inline-flex items-center justify-center rounded-full bg-green-500/20 px-3 py-1 text-sm font-medium text-green-400">Completado</span>
-              </td>
-              <td class="table-col-7 h-[72px] px-4 py-2 text-right">
-                <div class="flex justify-end gap-2">
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white"><span
-                      class="material-symbols-outlined text-base">visibility</span></button>
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white"><span
-                      class="material-symbols-outlined text-base">edit</span></button>
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-red-400"><span
-                      class="material-symbols-outlined text-base">delete</span></button>
-                </div>
-              </td>
-            </tr>
-            <tr class="border-t border-[#3b4e54]">
-              <td class="table-col-1 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm font-mono">VIAJE-00120</td>
-              <td class="table-col-2 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Tractor-B91</td>
-              <td class="table-col-3 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Puerto de Callao</td>
-              <td class="table-col-4 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Almacén Central</td>
-              <td class="table-col-5 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">2024-05-19 18:00</td>
-              <td class="table-col-6 h-[72px] px-4 py-2">
-                <span
-                  class="inline-flex items-center justify-center rounded-full bg-red-500/20 px-3 py-1 text-sm font-medium text-red-400">Cancelado</span>
-              </td>
-              <td class="table-col-7 h-[72px] px-4 py-2 text-right">
-                <div class="flex justify-end gap-2">
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white"><span
-                      class="material-symbols-outlined text-base">visibility</span></button>
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white"><span
-                      class="material-symbols-outlined text-base">edit</span></button>
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-red-400"><span
-                      class="material-symbols-outlined text-base">delete</span></button>
-                </div>
-              </td>
-            </tr>
-            <tr class="border-t border-[#3b4e54]">
-              <td class="table-col-1 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm font-mono">VIAJE-00119</td>
-              <td class="table-col-2 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Placa: ABC-987</td>
-              <td class="table-col-3 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Almacén Este</td>
-              <td class="table-col-4 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">Centro Logístico</td>
-              <td class="table-col-5 h-[72px] px-4 py-2 text-[#9cb2ba] text-sm">2024-05-18 11:45</td>
-              <td class="table-col-6 h-[72px] px-4 py-2">
-                <span
-                  class="inline-flex items-center justify-center rounded-full bg-green-500/20 px-3 py-1 text-sm font-medium text-green-400">Completado</span>
-              </td>
-              <td class="table-col-7 h-[72px] px-4 py-2 text-right">
-                <div class="flex justify-end gap-2">
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white"><span
-                      class="material-symbols-outlined text-base">visibility</span></button>
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white"><span
-                      class="material-symbols-outlined text-base">edit</span></button>
-                  <button class="p-2 rounded-lg hover:bg-white/10 text-red-400"><span
-                      class="material-symbols-outlined text-base">delete</span></button>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <style>
-      @container(max-width:1100px) {
-        .table-col-4 {
-          display: none;
-        }
-      }
+  <main class="flex-1 p-8 grid grid-cols-1 xl:grid-cols-3 gap-8">
+    <div class="xl:col-span-2 flex flex-col gap-8">
 
-      @container(max-width:900px) {
-        .table-col-3 {
-          display: none;
-        }
-      }
+      <!-- Page Heading -->
+      <header class="flex flex-wrap justify-between items-center gap-4">
+        <div class="flex flex-col gap-2">
+          <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">Dashboard de Viajes y Dispositivos</h1>
+          <p class="text-[#9cb2ba] text-base font-normal leading-normal">Visualización en tiempo real de dispositivos y viajes de la flota.</p>
+        </div>
+      </header>
 
-      @container(max-width:768px) {
-        .table-col-5 {
-          display: none;
-        }
-      }
+      <!-- Devices Section -->
+      <section>
+        <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Dispositivos Activos</h2>
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4">
+          <% if (devices && devices.length > 0) { %>
+            <% devices.forEach(device => { %>
+              <div class="flex flex-col gap-3 p-4 bg-[#1a292d] rounded-xl border border-white/10 cursor-pointer hover:border-primary/50 transition-colors">
+                <div class="flex justify-between items-start">
+                  <div class="flex flex-col">
+                    <p class="text-white text-base font-medium leading-normal"><%= device.key_identification || device.name || 'N/A' %></p>
+                    <p class="text-[#9cb2ba] text-sm font-normal leading-normal">Vehicle: <%= device.vehicle_id || device.vehicleId || 'N/A' %></p>
+                  </div>
+                  <div class="flex items-center gap-1.5 <%= device.first_activation ? 'bg-green-500/10 text-green-400' : 'bg-gray-500/10 text-gray-400' %> px-2 py-1 rounded-full">
+                    <span class="w-1.5 h-1.5 rounded-full <%= device.first_activation ? 'bg-green-400' : 'bg-gray-400' %>"></span>
+                    <p class="text-xs font-medium"><%= device.first_activation ? 'Online' : 'Offline' %></p>
+                  </div>
+                </div>
+                <p class="text-[#9cb2ba] text-xs font-mono">ID: <%= device.id %></p>
+              </div>
+            <% }) %>
+          <% } else { %>
+            <p class="text-gray-400">No hay dispositivos para mostrar.</p>
+          <% } %>
+        </div>
+      </section>
 
-      @container(max-width:640px) {
-        .table-col-2 {
-          display: none;
-        }
-      }
-    </style>
-  </div>
-  <!-- Pagination -->
-  <div class="flex justify-between items-center mt-4">
-    <p class="text-sm text-[#9cb2ba]">Mostrando 1-5 de 25 viajes</p>
-    <div class="flex items-center gap-2">
-      <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white disabled:opacity-50" disabled="">
-        <span class="material-symbols-outlined">chevron_left</span>
-      </button>
-      <button class="p-2 rounded-lg hover:bg-white/10 text-[#9cb2ba] hover:text-white">
-        <span class="material-symbols-outlined">chevron_right</span>
-      </button>
+      <!-- Trips Section -->
+      <section>
+        <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">Viajes Recientes</h2>
+        <div class="flex flex-col bg-[#1a292d] rounded-xl border border-white/10 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left">
+              <thead class="text-xs text-[#9cb2ba] uppercase border-b border-white/10">
+                <tr>
+                  <th class="px-6 py-3" scope="col">Trip ID</th>
+                  <th class="px-6 py-3" scope="col">Origen</th>
+                  <th class="px-6 py-3" scope="col">Destino</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% if (journeys && journeys.length > 0) { %>
+                  <% journeys.forEach(journey => { %>
+                    <tr class="border-b border-white/10 hover:bg-white/5 cursor-pointer">
+                      <td class="px-6 py-4 font-mono text-white">TRP-<%= journey.id %></td>
+                      <td class="px-6 py-4 text-white"><%= journey.starting_point || 'N/A' %></td>
+                      <td class="px-6 py-4 text-white"><%= journey.arrival_point || 'N/A' %></td>
+                    </tr>
+                  <% }) %>
+                <% } else { %>
+                  <tr>
+                    <td class="px-6 py-4 text-white" colspan="3">No hay viajes para mostrar.</td>
+                  </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </div>
   </main>
 </div>

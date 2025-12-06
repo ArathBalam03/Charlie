@@ -1,11 +1,5 @@
-// routes/dashboardRoutes.js
-
 import express from "express";
 import {
-  mostrarDashboard,
-  reportes,
-  operadores,
-  configuracion,
   devices,
   incidents,
   journeys,
@@ -16,23 +10,9 @@ import {
 
 const router = express.Router();
 
-// Dashboard
-router.get("/dashboard", mostrarDashboard);
-
-// Reportes de gráficas
-router.get("/reportes", reportes);
-
-// Reports (documentos)
-router.get("/reports", reports);
-
-// Operadores
-router.get("/operadores", operadores);
-
-// Configuración
-router.get("/configuracion", configuracion);
 
 // Devices
-router.get("/devices", devices);
+router.get("/devices", devices); 
 
 // Incidents
 router.get("/incidents", incidents);
@@ -40,10 +20,13 @@ router.get("/incidents", incidents);
 // Journeys
 router.get("/journeys", journeys);
 
+// Reports
+router.get("/reports", reports);
+
 // Roles
 router.get("/roles", roles);
 
 // Vehicles
-router.get("/vehicles", vehicles);
+router.get("/vehicles", vehicles); 
 
 export default router;
